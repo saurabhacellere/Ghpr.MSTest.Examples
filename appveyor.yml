@@ -1,0 +1,13 @@
+  before_build:
+    - nuget restore Ghpr.MSTest.Examples/Ghpr.MSTest.Examples.sln
+
+  build_script: 
+    - msbuild Ghpr.MSTest.Examples/Ghpr.MSTest.Examples.sln /p:Configuration=Release /t:Rebuild
+  
+  test:
+    assemblies:
+      - '**\*Tests.dll'
+      - '**\*Examples.dll'
+    categories:
+      only:
+        - SuccessCategory
