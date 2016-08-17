@@ -9,9 +9,9 @@
   <a href="https://github.com/GHPReporter/GHPReporter.github.io/">Site repo</a>
 </p>
 
-[![Language](http://gh-toprated.info/Badges/LanguageBadge?user=GHPReporter&repo=Ghpr.NUnit.Examples&theme=light&fontWeight=bold)](https://github.com/GHPReporter/Ghpr.NUnit.Examples)
-[![Build status](https://ci.appveyor.com/api/projects/status/o75j8g1t4h7qqt6d?svg=true)](https://ci.appveyor.com/project/elv1s42/ghpr-nunit-examples)
+[![Language](http://gh-toprated.info/Badges/LanguageBadge?user=GHPReporter&repo=Ghpr.MSTest.Examples&theme=light&fontWeight=bold)](https://github.com/GHPReporter/Ghpr.MSTest.Examples)
+[![Build status](https://ci.appveyor.com/api/projects/status/utth70dha91j28p3?svg=true)](https://ci.appveyor.com/project/elv1s42/ghpr-mstest-examples)
 
-# Ghpr.NUnit.Examples
+# Ghpr.MSTest.Examples
 
-Examples for NUnit adapter. You can create pull request with new tests to reproduce some GHPR.Core or GHPR.NUnit issues.
+Examples for MSTest adapter. You can create pull request with new tests to reproduce some GHPR.Core or GHPR.MSTest issues.
