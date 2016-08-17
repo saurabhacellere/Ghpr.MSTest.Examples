@@ -1,12 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Ghpr.MSTest.Examples
 {
+    [TestClass]
     public class Class1
     {
+        [TestMethod]
+        public void Test()
+        {
+            Console.WriteLine("Some test logging");
+            //Assert.AreEqual(1, 3);
+        }
     }
 }
