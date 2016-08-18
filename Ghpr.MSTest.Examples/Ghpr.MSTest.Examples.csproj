@@ -68,9 +68,13 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>cd $(SolutionDir)
-rmdir /S /Q TestRe‌​sults
-"$(DevEnvDir)mstest.exe" /testcontainer:$(SolutionDir)bin\Debug\$(TargetFileName) /usestderr /noisolation</PostBuildEvent>
+    <PostBuildEvent>if $(ConfigurationName) == Debug (
+    cd $(SolutionDir)
+    rmdir /S /Q TestRe‌​sults
+    "$(DevEnvDir)mstest.exe" /testcontainer:$(SolutionDir)bin\Debug\$(TargetFileName) /usestderr /noisolation
+) ELSE (
+  echo "test".
+)</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
     <PreBuildEvent>
