@@ -1,5 +1,4 @@
 ﻿using System;
-using System.ComponentModel;
 using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 

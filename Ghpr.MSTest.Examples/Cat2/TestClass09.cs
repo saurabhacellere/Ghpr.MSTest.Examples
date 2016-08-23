@@ -1,8 +1,4 @@
-﻿using System;
-using System.ComponentModel;
-using System.Threading;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using static Ghpr.MSTest.Examples.ResultHelper;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Ghpr.MSTest.Examples.Cat2
 {
