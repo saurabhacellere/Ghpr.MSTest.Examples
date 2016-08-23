@@ -9,7 +9,7 @@ namespace Ghpr.MSTest.Examples.Cat1
     public class TestClass1
     {
         [TestMethod]
-        public void SimpleFailedTest()
+        public void SimpleFailedTestWithLog()
         {
             Console.WriteLine("This is test output, we are logging some stuff!");
             Assert.AreEqual(1, 2);
