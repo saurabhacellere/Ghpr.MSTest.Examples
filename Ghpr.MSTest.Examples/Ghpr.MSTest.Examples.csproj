@@ -89,7 +89,7 @@
     <PostBuildEvent>if $(ConfigurationName) == Debug (
     cd $(SolutionDir)
     "$(DevEnvDir)mstest.exe" /testcontainer:$(TargetPath) /resultsfile:testResults.trx /usestderr /noisolation
-    "$(TargetDir)\Ghpr.MSTest.exe" "$(SolutionDir)testResults.trx" 
+    "$(TargetDir)Ghpr.MSTest.exe" "$(SolutionDir)testResults.trx" 
 )</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
