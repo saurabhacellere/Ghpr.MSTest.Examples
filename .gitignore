@@ -241,3 +241,4 @@ GhprWeb/.idea/vcs.xml
 GhprWeb/GhprWeb.sln.iml
 GhprWeb/.vs/config/applicationhost.config
 Ghpr.MSTest.Examples/testResults.trx
+Ghpr.MSTest.Examples/.vs/config/applicationhost.config
