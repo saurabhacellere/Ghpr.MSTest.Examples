@@ -10,7 +10,7 @@ namespace Ghpr.MSTest.Examples.Cat2
         [TestMethod]
         public void SimpleFailedTest()
         {
-            Console.WriteLine("This is test output, we are logging some stuff!");
+            System.Console.WriteLine("This is test output, we are logging some stuff!");
             Assert.AreEqual(1, 2);
         }
         
@@ -25,18 +25,18 @@ namespace Ghpr.MSTest.Examples.Cat2
         [TestMethod]
         public void LongLogTest()
         {
-            Console.WriteLine("Testing log writing 1");
+            System.Console.WriteLine("Testing log writing 1");
             Thread.Sleep(100);
-            Console.WriteLine("Testing log writing 2");
+            System.Console.WriteLine("Testing log writing 2");
             Thread.Sleep(200);
-            Console.WriteLine("Testing log writing 3");
+            System.Console.WriteLine("Testing log writing 3");
             Thread.Sleep(100);
-            Console.WriteLine("Testing log writing 4");
+            System.Console.WriteLine("Testing log writing 4");
             Thread.Sleep(200);
-            Console.WriteLine("Testing log writing 5");
+            System.Console.WriteLine("Testing log writing 5");
             for (var i = 6; i < 55; i++)
             {
-                Console.WriteLine("Testing log writing " + i);
+                System.Console.WriteLine("Testing log writing " + i);
             }
             Assert.AreEqual(1, 2);
         }

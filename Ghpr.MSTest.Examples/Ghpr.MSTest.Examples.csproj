@@ -33,15 +33,39 @@
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Ghpr.Core, Version=0.7.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\Ghpr.Core.0.7.0\lib\net452\Ghpr.Core.dll</HintPath>
+    <Reference Include="Ghpr.Console, Version=0.8.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Ghpr.Console.0.8.0.2\lib\net452\Ghpr.Console.exe</HintPath>
     </Reference>
-    <Reference Include="Ghpr.MSTest, Version=0.7.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\Ghpr.MSTest.0.7.0\lib\net452\Ghpr.MSTest.exe</HintPath>
+    <Reference Include="Ghpr.Core, Version=0.8.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Ghpr.Core.0.8.0.2\lib\net452\Ghpr.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Ghpr.MSTest, Version=0.8.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Ghpr.MSTest.0.8.0.2\lib\net452\Ghpr.MSTest.dll</HintPath>
+    </Reference>
+    <Reference Include="Ghpr.NUnit, Version=0.8.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Ghpr.NUnit.0.8.0.2\lib\net452\Ghpr.NUnit.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Mono.Cecil, Version=0.9.6.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>packages\NUnit.Engine.3.7.0\lib\Mono.Cecil.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit-agent, Version=3.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\NUnit.Engine.3.7.0\lib\nunit-agent.exe</HintPath>
+    </Reference>
+    <Reference Include="nunit-agent-x86, Version=3.7.0.0, Culture=neutral, processorArchitecture=x86">
+      <HintPath>packages\NUnit.Engine.3.7.0\lib\nunit-agent-x86.exe</HintPath>
+    </Reference>
+    <Reference Include="nunit.engine, Version=3.7.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>packages\NUnit.Engine.3.7.0\lib\nunit.engine.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.engine.api, Version=3.0.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>packages\NUnit.Engine.3.7.0\lib\nunit.engine.api.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.9.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>packages\NUnit.3.9.0\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -77,17 +101,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Ghpr.Core.Settings.json" />
-    <None Include="Ghpr.MSTest.Settings.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <None Include="Ghpr.MSTest.Settings.json" />
+    <None Include="Ghpr.NUnit.Settings.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>if $(ConfigurationName) == Debug (cd "$(SolutionDir)")
 if $(ConfigurationName) == Debug ("$(DevEnvDir)mstest.exe" /testcontainer:$(TargetPath) /resultsfile:testResults.trx /usestderr /noisolation)
-if $(ConfigurationName) == Debug (powershell.exe -command "Start-Sleep -Milliseconds 10000"&gt;nul)
-if $(ConfigurationName) == Debug ("$(TargetDir)Ghpr.MSTest.exe" "$(SolutionDir)testResults.trx")</PostBuildEvent>
+</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
     <PreBuildEvent>cd $(SolutionDir)

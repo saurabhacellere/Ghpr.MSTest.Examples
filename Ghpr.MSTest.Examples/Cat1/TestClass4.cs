@@ -1,5 +1,4 @@
-﻿using System;
-using System.Threading;
+﻿using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Ghpr.MSTest.Examples.Cat1
@@ -10,7 +9,7 @@ namespace Ghpr.MSTest.Examples.Cat1
         [TestMethod]
         public void SomeTestName()
         {
-            Console.WriteLine($"Test");
+            System.Console.WriteLine($"Test");
             Thread.Sleep(100);
         }
     }
