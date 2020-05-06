@@ -7,55 +7,55 @@ namespace Ghpr.MSTest.Examples.Cat3
     public class TestClass16
     {
         [TestMethod]
-        public void RandomResultTest1()
+        public void class16_test_1()
         {
             RandomResultMethod();
         }
 
         [TestMethod]
-        public void RandomResultTest2()
+        public void class16_test_2()
         {
             RandomResultMethod();
         }
 
         [TestMethod]
-        public void RandomResultTest3()
+        public void class16_test_3()
         {
             RandomResultMethod();
         }
 
         [TestMethod]
-        public void RandomResultTest4()
+        public void class16_test_4()
         {
             RandomResultMethod();
         }
 
         [TestMethod]
-        public void RandomResultTest5()
+        public void class16_test_5()
         {
             RandomResultMethod();
         }
 
         [TestMethod]
-        public void RandomResultTest6()
+        public void class16_test_6()
         {
             RandomResultMethod();
         }
 
         [TestMethod]
-        public void RandomResultTest7()
+        public void class16_test_7()
         {
             RandomResultMethod();
         }
 
         [TestMethod]
-        public void RandomResultTest8()
+        public void class16_test_8()
         {
             RandomResultMethod();
         }
 
         [TestMethod]
-        public void RandomResultTest9()
+        public void class16_test_9()
         {
             RandomResultMethod();
         }
