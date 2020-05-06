@@ -92,6 +92,7 @@
     <Compile Include="Cat3\TestClass13.cs" />
     <Compile Include="Cat3\TestClass14.cs" />
     <Compile Include="Cat3\TestClass15.cs" />
+    <Compile Include="Cat3\TestClass16.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResultHelper.cs" />
